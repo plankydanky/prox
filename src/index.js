@@ -2,7 +2,7 @@ import RocketBooster from 'rocket-booster';
 
 const config = {
   upstream: {
-    domain: 'nhentai.net',
+    domain: 'unifi.kingcunt.dev',
     protocol: 'https',
   },
 
