@@ -12,21 +12,6 @@ const config = {
       javascript: true,
       css: true,
       html: true,
-    },
-  },
-
-  firewall: [
-    {
-      field: 'country',
-      operator: 'in',
-      value: ['US'],
-    },
-  ],
-
-  cors: {
-    origin: true,
-    allowedHeaders: '*',
-    methods: ['GET', 'POST'],
   },
 };
 
