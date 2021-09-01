@@ -24,9 +24,7 @@ const config = {
   ],
 
   cors: {
-    origin: true,
-    allowedHeaders: '*',
-    methods: ['GET', 'POST'],
+    origin: '*',
   },
 };
 
