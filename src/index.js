@@ -1,22 +1,14 @@
-import RocketBooster from 'rocket-booster';
-
-const config = {
-  upstream: {
-    domain: 'unifi.kingcunt.dev',
-    protocol: 'https',
-  },
-
-  optimization: {
-    mirage: true,
-    minify: {
-      javascript: true,
-      css: true,
-      html: true,
-  },
-};
+import useProxy from 'rocket-booster';
 
 addEventListener('fetch', (event) => {
-  const booster = new RocketBooster(config);
-  const response = booster.apply(event.request);
+  const proxy = useProxy();
+  proxy.use('/', {
+    upstream: {
+      domain:  'unifi.kingcunt.dev',
+      protocol: 'https',
+    },
+  });
+
+  const response = proxy.apply(event.request);
   event.respondWith(response);
 });
