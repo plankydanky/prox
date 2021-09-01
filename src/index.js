@@ -23,8 +23,13 @@ const config = {
     },
   ],
 
-  cors: {
-    origin: '*',
+  security: {
+    fowarded: true,
+    hidePoweredBy: true,
+    ieNoOpen: true,
+    xssFilter: true,
+    noSniff: true,
+    setCookie: true,
   },
 };
 
