@@ -1,10 +1,8 @@
 import RocketBooster from 'rocket-booster';
 
-addEventListener('fetch', (event) => {
-  const proxy = useProxy();
-  proxy.use('/', {
+const config = {
   upstream: {
-    domain: 'unifi.kingcunt.dev',
+    domain: 'home.ourhome2.net',
     protocol: 'https',
   },
 
@@ -25,8 +23,10 @@ addEventListener('fetch', (event) => {
     },
   ],
 
-   cors: {
-   origin: '*',
+  cors: {
+    origin: true,
+    allowedHeaders: '*',
+    methods: ['GET', 'POST'],
   },
 };
 
